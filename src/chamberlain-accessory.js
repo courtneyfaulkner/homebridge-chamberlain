@@ -69,7 +69,9 @@ module.exports = class {
       doorstate.value !== desireddoorstate.value ? ACTIVE_DELAY : IDLE_DELAY
     ).catch(_.noop).then((delay = IDLE_DELAY) => {
       clearTimeout(this.pollTimeoutId);
-      this.pollTimeoutId = setTimeout(this.poll, delay);
+      if (delay == ACTIVE_DELAY) {
+        this.pollTimeoutId = setTimeout(this.poll, delay);
+      }
     });
   }
 

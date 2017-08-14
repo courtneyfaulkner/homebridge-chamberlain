@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const url = require('url');
 
 const MyQApplicationId =
-  'NWknvuBd7LoFHfXmKNMBcgajXtZEgKUh4V7WNzMidrpUUluDpVYVZx+xT4PCM5Kx';
+  'OA9I/hgmPHFp9RYKJqCKfwnhh28uqLJzZ9KOJf1DXoo8N2XAaVX6A1wcLYyWsnnv';
 const protocol = 'https:';
 const host = 'myqexternal.myqdevice.com';
 
@@ -14,10 +14,7 @@ const req = ({body, headers, method, pathname, query}) =>
     body: body == null ? body : JSON.stringify(body),
     headers: _.extend({
       'Content-Type': 'application/json',
-      'User-Agent': 'Chamberlain/3.61.1 (iPhone; iOS 10.0.1; Scale/2.00)',
-      ApiVersion: '4.1',
-      BrandId: '2',
-      Culture: 'en',
+      'User-Agent': 'Chamberlain/3773 (iPhone; iOS 10.0.1; Scale/2.00)',
       MyQApplicationId
     }, headers),
     method
